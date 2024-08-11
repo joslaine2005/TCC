@@ -7,24 +7,23 @@
     list-style: none;
     text-decoration: none;
 }
-head{
+header{
     position: fixed;
     width: 100%;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 20px 10%;
 }
-.imagem1{
+.logo img{
     max-width: 120px;
     height: auto;
 }
 .navmenu{
     display: flex;
-    flex-direction: row;
 }
 .navmenu a{
     color: #2c2c2c;
@@ -40,7 +39,6 @@ head{
 .nav-icon{
     display: flex;
     align-items: center;
-    justify-content: end;
 }
 .nav-icon i{
     margin-right: 20px;
@@ -154,5 +152,98 @@ header.sticky{
 }
 .row img{
     width: 100%;
-    height: auto;
+    height: auto .40s;
+}
+.row img:hover{
+    transform: scale(0.9);
+}
+.product-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.heart-icon:hover{
+    color: #EE1C47;
+}
+.ratting i{
+    color: #FF8C00;
+    font-size: 18px;
+}
+.price h4{
+    color:#111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.price p{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+}
+.end-text{
+    background-color: #edfff1;
+    text-align: center;
+    padding: 15px;
+}
+.end-text p{
+   color: #111;
+   text-transform: capitalize;
+}
+
+
+/*responsive-css */
+@media(max-width:890px){
+    header{
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+@media(max-width:630px){
+    .main-text h1{
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p{
+        font-size: 18px;
+        transition: .4s;
+    }
+    .main-btn{
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+
+@media(max-width:750px){
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background: #edfff1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+    }
+    .navmenu a{
+        display: block;
+        margin: 18px 0;
+    }
+    .navmenu.open{
+        right: 0;
+    }
 }
